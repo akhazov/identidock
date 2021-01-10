@@ -32,7 +32,7 @@ pipeline {
         stage("Deploy") {
             steps {
             when {
-                '${param.DEPLOY}' true
+                booleanParam name: 'DEPLOY', value: true
             }
                 echo "Этап 3"
             }
