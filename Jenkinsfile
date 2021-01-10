@@ -32,7 +32,7 @@ pipeline {
         stage("Deploy") {
             steps {
                 when {
-                    equals expected: true, actual: params.DEPLOY
+                    expression { return params.DEPLOY }
                 }
                 echo "Этап 4"
             }
