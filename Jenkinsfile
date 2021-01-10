@@ -6,7 +6,7 @@ pipeline {
     stages {
         stage("Init repo") {
             steps {
-                git url: '${GIT_REPOSITORY_URL}',
+                git url: "${GIT_REPOSITORY_URL}",
                     branch: 'master'
             }
         }
@@ -17,7 +17,7 @@ pipeline {
         }
         stage("Build Docker Image") {
             steps {
-                sh 'echo "Этап 3"'
+                echo "Этап 3"
             }
         }
     }
