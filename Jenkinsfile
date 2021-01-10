@@ -10,5 +10,15 @@ pipeline {
                     branch: 'master'
             }
         }
+        stage("Compile") {
+            steps {
+                sh 'git --version'
+            }
+        }
+        stage("Build Docker Image") {
+            steps {
+                sh 'echo "Этап 3"'
+            }
+        }
     }
 }
