@@ -4,7 +4,7 @@ def GIT_REPOSITORY_URL = "https://github.com/akhazov/identidock.git"
 pipeline {
     agent {
         docker {
-            image 'alpine'
+            image 'alpine/git'
         }
     }
     stages {
