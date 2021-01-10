@@ -29,5 +29,13 @@ pipeline {
                 echo "Этап 3"
             }
         }
+        stage("Deploy") {
+            steps {
+            when {
+                ${param.DEPLOY} true
+            }
+                echo "Этап 3"
+            }
+        }
     }
 }
