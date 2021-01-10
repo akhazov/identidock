@@ -7,6 +7,10 @@ pipeline {
             image 'alpine'
         }
     }
+    parameters {
+        booleanParam(name: 'COMPILE', defaultValue: true, description: 'Compile this value')
+        booleanParam(name: 'DEPLOY', defaultValue: false, description: 'Deploy this value')
+    }
     stages {
         stage("Init repo") {
             steps {
