@@ -2,7 +2,6 @@ def DOCKER_IMAGE_BRANCH = ""
 def GIT_REPOSITORY_URL = "https://github.com/akhazov/identidock.git"
 
 pipeline {
-    sh 'hostname'
     agent {
         docker {
             image 'alpine'
