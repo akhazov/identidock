@@ -32,7 +32,7 @@ pipeline {
         stage("Deploy") {
             steps {
                 if(params.DEPLOY) {
-                    echo "Этап 3"
+                    echo "Этап 4"
                 }
             }
         }
