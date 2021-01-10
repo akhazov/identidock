@@ -31,9 +31,10 @@ pipeline {
         }
         stage("Deploy") {
             steps {
-                if (params.DEPLOY.toBoolean()) {
-                    echo "Этап 4"
+                when {
+                    equals expected: true, actual: params.DEPLOY
                 }
+                echo "Этап 4"
             }
         }
     }
