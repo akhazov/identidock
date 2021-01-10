@@ -31,10 +31,9 @@ pipeline {
         }
         stage("Deploy") {
             steps {
-            when {
-                booleanParam { DEPLOY == true }
-            }
-                echo "Этап 3"
+                if(params.DEPLOY) {
+                    echo "Этап 3"
+                }
             }
         }
     }
