@@ -12,8 +12,6 @@ pipeline {
             steps {
                 sh 'hostname'
                 sh 'ls'
-                git url: "${GIT_REPOSITORY_URL}",
-                    branch: 'master'
             }
         }
         stage("Compile") {
