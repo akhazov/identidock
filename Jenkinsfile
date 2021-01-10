@@ -6,7 +6,7 @@ pipeline {
     stages {
         stage("Init repo") {
             steps {
-                git url:${GIT_REPOSITORY_URL},
+                git url: ${GIT_REPOSITORY_URL},
                     branch: 'master'
             }
         }
